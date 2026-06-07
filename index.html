@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISANN FREELANCE GAME</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #e0f7ff, #ffffff);
+            min-height: 100vh;
+            color: #0f172a;
+        }
+
+        /* HEADER */
+
+        header {
+            position: relative;
+            text-align: center;
+            padding: 70px 20px;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle,
+                    rgba(56, 189, 248, .6) 0%,
+                    rgba(56, 189, 248, 0) 70%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: glowMove 6s infinite ease-in-out;
+        }
+
+        header h1 {
+            position: relative;
+            z-index: 1;
+            font-size: 3.2rem;
+            font-weight: bold;
+
+            background: linear-gradient(90deg,
+                    #0284c7,
+                    #e9ce05,
+                    #c00404,
+                    #38bdf8,
+                    #0284c7);
+
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            animation: textGlow 4s linear infinite;
+        }
+
+        header p {
+            position: relative;
+            z-index: 1;
+            color: #475569;
+            margin-top: 10px;
+            font-size: 1.1rem;
+        }
+
+        /* CONTAINER */
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* CARD */
+
+        .card {
+            background: #f5f2f2;
+            border: 2px solid #bae6fd;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(14, 165, 233, .15);
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(14, 165, 233, .35);
+        }
+
+        .game-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card h2 {
+            color: #0284c7;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #475569;
+            line-height: 1.6;
+        }
+
+        .badge {
+            display: inline-block;
+            margin-top: 15px;
+            background: #0ea5e9;
+            color: rgb(253, 247, 247);
+            padding: 10px 18px;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        /* FOOTER */
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #64748b;
+        }
+
+        /* ANIMATION */
+
+        @keyframes glowMove {
+            0% {
+                transform: translate(-50%, -50%) scale(1);
+            }
+
+            50% {
+                transform: translate(-50%, -50%) scale(1.4);
+            }
+
+            100% {
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+
+        @keyframes textGlow {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+
+        /* MOBILE */
+
+        @media(max-width:768px) {
+
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            .game-img {
+                height: 180px;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>🎮 ISANN FREELANCE GAME 🎮</h1>
+        <p>Klik salah satu aplikasi di bawah untuk membuka link</p>
+    </header>
+
+    <div class="container">
+
+        ```
+        <div class="card">
+            <img src="jafi.png" alt="No Fight" class="game-img">
+
+            <div class="card-content">
+                <h2>🎮 No Fight</h2>
+                <p>ID Undangan: 39386314</p>
+                <div class="badge">KLIK UNTUK MEMBUKA</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="jafi.png" alt="Game Biu" class="game-img">
+
+            <div class="card-content">
+                <h2>💰 Game Biu</h2>
+                <p>Mainkan game dan lihat informasi aplikasi.</p>
+                <div class="badge">KLIK UNTUK MEMBUKA</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="jafi.png" alt="Cool Lady" class="game-img">
+
+            <div class="card-content">
+                <h2>👑 Cool Lady</h2>
+                <p>ID Undangan: 41599752</p>
+                <div class="badge">KLIK UNTUK MEMBUKA</div>
+            </div>
+        </div>
+        ```
+
+    </div>
+
+    <footer>
+        © 2026 ISANN FREELANCE GAME
+    </footer>
+
+</body>
+
+</html>
